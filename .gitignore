@@ -1,0 +1,13 @@
+text
+# Maven build output
+target/
+
+# Eclipse-specific files
+.project
+.classpath
+.settings/
+.metadata/
+
+# Binary files
+*.class
+*.jars
