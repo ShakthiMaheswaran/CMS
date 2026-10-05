@@ -11,3 +11,5 @@ target/
 # Binary files
 *.class
 *.jars
+
+.idea
