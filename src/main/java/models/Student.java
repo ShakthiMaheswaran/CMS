@@ -13,6 +13,19 @@ public class Student {
         this.year = 1;
     }
 
+    public Student(String name, int year, String dept) {
+        this.name = name;
+        this.year = year;
+        this.dept = dept;
+    }
+
+    public Student(String name, int rollNo, int year, String dept) {
+        this.name = name;
+        this.rollNo = rollNo;
+        this.year = year;
+        this.dept = dept;
+    }
+
     public String getName() { return name; }
 
     public void setName(String name) { this.name = name; }
