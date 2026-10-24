@@ -10,7 +10,7 @@ public class MySqlConnect {
 
     // 1. Define database configuration constants
     private static final String URL = "jdbc:mysql://localhost:3306/CMS";
-    private static final String USER = "shakthi";
+    private static final String USER = "root";
     private static final String PASSWORD = "root";
 
     public static void main(String[] args) {

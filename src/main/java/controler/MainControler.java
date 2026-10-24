@@ -30,6 +30,7 @@ public class MainControler {
 			if(true){
 				this.loginview.dispose();
 				initDashoard();
+				method1();
 			}
 			else {
 				this.loginview.notifyInvaliedLogin();
@@ -39,6 +40,22 @@ public class MainControler {
 
 	public void initDashoard(){
 		dashboardview = new Dashboardview();
+	}
+
+	public void method1() {
+		dashboardview.getManageStudents().addActionListener( e -> {
+
+			System.out.println(e);
+
+			dashboardview.manageView();
+		});
+
+		dashboardview.getMarkAttendance().addActionListener( e -> {
+
+			System.out.println(e);
+
+			dashboardview.attendanceView();
+		});
 	}
 	
 }
