@@ -3,7 +3,7 @@ package models;
 public class Student {
 
     private String name;
-    private int rollNo;
+    private String rollNo;
     private int year;
     private String dept;
 
@@ -19,7 +19,7 @@ public class Student {
         this.dept = dept;
     }
 
-    public Student(String name, int rollNo, int year, String dept) {
+    public Student(String name, String rollNo, int year, String dept) {
         this.name = name;
         this.rollNo = rollNo;
         this.year = year;
@@ -30,9 +30,9 @@ public class Student {
 
     public void setName(String name) { this.name = name; }
 
-    public int getRollNo() { return rollNo; }
+    public String getRollNo() { return rollNo; }
 
-    public void setRollNo(int rollNo) { this.rollNo = rollNo; }
+    public void setRollNo(String rollNo) { this.rollNo = rollNo; }
 
     public int getYear() { return year; }
 

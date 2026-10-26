@@ -1,6 +1,7 @@
 package controler;
 
 import models.Authehnticator;
+import models.StudentOps;
 import models.User;
 import views.Dashboardview;
 import views.Loginview;
@@ -11,6 +12,7 @@ public class MainController {
 	private Dashboardview dashboardview;
 	private final User currentUser;
 	private Authehnticator authehnticator;
+	private StudentOps Sto;
 	
 	public MainController(Loginview loginview) {
 		this.loginview = loginview;
@@ -40,6 +42,7 @@ public class MainController {
 
 	public void initDashboard(){
 		dashboardview = new Dashboardview();
+		Sto = new StudentOps();
 		dashboardview.getManageStudents().addActionListener( e -> handleManageStudentsClick());
 		dashboardview.getMarkAttendance().addActionListener( e -> handleMarkAttendanceClick());
 	}
@@ -58,6 +61,9 @@ public class MainController {
 		String t2 = dashboardview.getYearText();
 
 		System.out.println("T1 :"+t1+" T2 :"+t2);
+
+
+
 	}
 
 }
