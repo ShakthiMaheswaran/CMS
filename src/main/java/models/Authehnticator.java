@@ -1,8 +1,8 @@
 package models;
 
-public class Authenticator {
+public class Authehnticator {
 	
-	public Authenticator() {
+	public Authehnticator() {
 		
 	}
 	

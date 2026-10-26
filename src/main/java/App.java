@@ -1,12 +1,19 @@
-import controler.MainControler;
+import controler.MainController;
 import views.Loginview;
+
+import javax.swing.*;
 
 public class App {
 
 	public static void main(String arg[]) {
 
-		@SuppressWarnings("unused")
-		MainControler mc = new MainControler(new Loginview());
+
+
+
+		SwingUtilities.invokeLater(() -> {
+			Loginview lv = new Loginview();
+			MainController mc = new MainController(lv);
+		});
 		
 	}
 }

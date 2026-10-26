@@ -15,8 +15,8 @@ public class Dashboardview extends JFrame {
 	private JLabel l1;
 	private JLabel l2;
 	private JLabel l3;
-	private JTextField t1;
-	private JTextField t2;
+	private JTextField Dept;
+	private JTextField year;
 	private JButton Go;
 
 	private JPanel panel1;
@@ -57,10 +57,10 @@ public class Dashboardview extends JFrame {
 		this.add(panel1);
 	}
 
-	public void manageView(){
+	public void showManageView(){
 		this.remove(panel1);
 
-		//inilizision manage view...
+		//Initialization manage view...
 		ManageStPanel = new JPanel(new FlowLayout());
 		ManageStPanel.setBounds(10,10,770,550);
 		ManageStPanel.setBackground( Color.BLACK);
@@ -72,18 +72,32 @@ public class Dashboardview extends JFrame {
 		this.repaint();
 	}
 
-	public void attendanceView(){
+	public void showAttendanceView(){
 		this.remove(panel1);
 
-		//inilizision manage view...
-		AttendancePanel = new JPanel(new FlowLayout());
+		//Initialization attendance view...
+		AttendancePanel = new JPanel();
 		AttendancePanel.setBounds(10,10,770,550);
-		AttendancePanel.setBackground( Color.blue);
+		AttendancePanel.setLayout(new FlowLayout());
 
+		//Components for the attendance view
+		l1 = new JLabel("Dept :");
+		l2 = new JLabel("Year :");
+		l3 = new JLabel("extra ");
+		year = new JTextField(15);
+		Dept = new JTextField(15);
+		Go = new JButton("Go");
 
+		AttendancePanel.add(l1);
+		AttendancePanel.add(Dept);
+		AttendancePanel.add(l2);
+		AttendancePanel.add(year);
+		AttendancePanel.add(l3);
+		AttendancePanel.add(Go);
 
 
 		this.add(AttendancePanel);
+		this.revalidate();
 		this.repaint();
 	}
 
@@ -97,4 +111,12 @@ public class Dashboardview extends JFrame {
 	public JPanel getPanel1() 				{	return panel1;			}
 
 	public JPanel getManageStPanel() 		{	return ManageStPanel;	}
+
+	public JPanel getAttendancePanel() 		{	return AttendancePanel;	}
+
+	public JButton getGo() 					{	return Go;	}
+
+	public String getDeptText()           { return Dept != null ? Dept.getText() : ""; }
+	public String getYearText()           { return year != null ? year.getText() : ""; }
+
 }
