@@ -12,12 +12,13 @@ public class MainController {
 	private Dashboardview dashboardview;
 	private final User currentUser;
 	private Authehnticator authehnticator;
-	private StudentOps Sto;
+	private final StudentOps Sto;
 	
 	public MainController(Loginview loginview) {
 		this.loginview = loginview;
 		this.currentUser = new User();
 		this.authehnticator = new Authehnticator();
+		this.Sto = new StudentOps();
 
 		this.loginview.addGui();
 		this.loginview.btnLogin.addActionListener(e -> login() );
@@ -42,7 +43,7 @@ public class MainController {
 
 	public void initDashboard(){
 		dashboardview = new Dashboardview();
-		Sto = new StudentOps();
+
 		dashboardview.getManageStudents().addActionListener( e -> handleManageStudentsClick());
 		dashboardview.getMarkAttendance().addActionListener( e -> handleMarkAttendanceClick());
 	}
@@ -61,8 +62,6 @@ public class MainController {
 		String t2 = dashboardview.getYearText();
 
 		System.out.println("T1 :"+t1+" T2 :"+t2);
-
-
 
 	}
 
