@@ -41,4 +41,15 @@ public class Student {
     public String getDept() { return dept; }
 
     public void setDept(String dept) { this.dept = dept; }
+
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", rollNo='" + rollNo + '\'' +
+                ", year=" + year +
+                ", dept='" + dept + '\'' +
+                '}';
+    }
 }
